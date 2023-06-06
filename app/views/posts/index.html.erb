@@ -1,0 +1,12 @@
+<h1><%= t('.Posts') %></h1>
+
+<% if user_signed_in? && current_user.admin? %>
+  <%= link_to t('.submit.NewPost'), new_admin_post_path, 
+    class: "btn btn-outline-#{cookies[:theme] == "dark" ? "light": "dark"} btn-sm" %>
+<% end %>
+
+<section id='posts'>
+  <%= render @posts %>
+</section>
+
+<%= will_paginate @posts %>

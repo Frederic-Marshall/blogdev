@@ -1,0 +1,40 @@
+ru:
+  activerecord:
+    models:
+      post: "Статья"
+      user: 'Пользователь'
+    attributes:
+      user:
+        email: 'Электронная почта'
+        password: 'Пароль'
+        password_confirmation: 'Подтвердите пароль'
+        current_password: 'Правильный пароль'
+        moderatior: 'Модератор'
+        admin: "Админ"
+      post:
+        title: 'Название'
+        summary: "Краткая статья"
+        body: 'Содержание'
+        category_id: 'Категория'
+        all_tags: 'Теги'
+        category: 'Категория'
+        image: 'Превью'
+      category: 
+        name: 'Название'
+        parent_id: 'Категория родитель'
+    errors:
+      models:
+        user:
+          attributes:
+            password:
+              too_short: 'слишком короткий'
+            password_confirmation:
+              confirmation: ' '
+            email:
+              taken: 'уже используется' 
+        post:
+          attributes:
+            category:
+              required: 'нужно выбрать'
+      messages:
+        blank: 'не может быть пустым'

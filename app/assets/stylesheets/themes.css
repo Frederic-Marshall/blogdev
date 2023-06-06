@@ -1,0 +1,89 @@
+:root {
+  --light-bg-color: #c9c9c9;
+  --light-text-color: black;
+  --light-bg-item: #cfcfcf;
+
+  --dark-bg-color: #3d3d3d;
+  --dark-text-color: white;
+  --dark-bg-item: #222222;
+} 
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: var(--dark-bg-color);
+    color: var(--dark-text-color);
+  }
+
+  body.light {
+    background: var(--light-bg-color);
+    color: var(--light-text-color);
+  }
+
+  .bg-dark {
+    background-color: var(--dark-bg-item);
+  }
+
+  .navbar-brand.dark {
+    color: var(--dark-text-color);
+  }
+
+  .nav-link.dark {
+    color: var(--dark-text-color);
+  }
+
+  .container-border.dark {
+    background-color: var(--dark-bg-item);
+  }
+
+  a.dark, button.dark {
+    color: var(--dark-text-color)
+  }
+
+  th.dark {
+    color: var(--dark-text-color)
+  }
+
+  td.dark {
+    color: var(--dark-text-color)
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    background: var(--light-bg-color);
+    color: var(--light-text-color);
+  }
+
+  body.dark {
+    background: var(--dark-bg-color);
+    color: var(--dark-text-color);
+  }
+
+  .bg-light {
+    background-color: var(--light-bg-item);
+  }
+
+  .navbar-brand.light {
+    color: var(--light-text-color);
+  }
+
+  .nav-link.light {
+    color: var(--light-text-color);
+  }
+
+  .container-border.light {
+    background-color: var(--dark-bg-item);
+  }
+
+  a.light, button.dark {
+    color: var(--light-text-color)
+  }
+
+  th.light {
+    color: var(--light-text-color)
+  }
+
+  td.light {
+    color: var(--light-text-color)
+  }  
+}

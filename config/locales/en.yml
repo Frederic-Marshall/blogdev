@@ -1,0 +1,109 @@
+en:
+  admin:
+    common:
+      errors: 'You have errors'
+      back: 'Back'
+    users:
+      form:
+        text: 'Put true or false'
+        submit:
+          save: 'Save'
+    categories:
+      index:
+        Categories: 'Categories'
+        submit:
+          edit: 'Edit'
+          delete: 'Delete'
+          NewCategory: 'New category'
+      new: 
+        NewCategory: 'New category'
+      edit: 
+        EditCategory: 'Edit category'
+      form:
+        submit:
+          '%{action} category'
+    posts:
+      new: 
+        NewPost: 'New Post'
+      edit: 
+        EditPost: 'Edit post'
+      form:
+        submit:
+          '%{action} post'
+  common:
+    errors: 'You have errors'
+    back: 'Back'
+    create: 'Create'
+    edit: 'Edit'
+  layouts:
+    admin:
+      tags: "Tags"
+      Contacts: 'Contacts'
+      Posts: "Posts"
+      SignIn: 'Sign In'
+      LogIn: 'Log in'
+      Exit: 'Sign out'
+    application:
+      tags: "Tags"
+      Contacts: 'Contacts'
+      Posts: "Posts"
+      SignIn: 'Sign Up'
+      LogIn: 'Log in'
+      Exit: 'Sign out'
+  posts:
+    show:
+      edit: 'Edit'
+      delete: 'Delete'
+    index:
+      Posts: 'Posts'
+      submit:
+        NewPost: 'New post'
+  will_paginate:
+    previous_label: "&larr;"
+    next_label: "&rarr;"
+  shared:
+    submenu:
+      category:
+        categories: 'Categories'
+  devise:
+    confirmations:
+      new:
+        Reconfirm: 'Resending'
+        Resend: 'Resend'
+    passwords:
+      new:
+        ForgotPassword: 'Forgot your password?'
+        submit:
+          SendMeResetPasswordInstructions: 'Email recovery instructions'
+      edit:
+        ChangeYourPassword: 'Change your password'
+        submit:
+          ChangeMyPassword: 'Change my password'
+        min: 'Minimum characters: '
+    registrations:
+      new:
+        SugnUp: "Sign Up"
+        submit:
+          SignUp: 'SignUp'
+        min: 'Minimum characters: '
+      edit:
+        Editing: "Editing"
+        submit:
+          Update: 'Update'
+          Cancelmyaccount: 'Cancel my account'
+        min: 'Minimum characters: '
+        leaveblankifyoudon'twanttochangeit: 'Leave this field if you do not want to change it'
+        weneedyourcurrentpasswordtoconfirmyourchanges: 'We need your current password to confirm your changes'
+        Cancelmyaccount: 'Cancel my account'
+    sessions:
+      new:
+        LogIn: 'Log in'
+        submit:
+          LogIn: 'LogIn'
+    shared:
+      links:
+        LogIn: 'LogIn'
+        SignUp: 'Sign Up'
+        ForgotPassword: 'Forgot your password?'
+        Reconfirm: 'Resending'
+        ReconfirmInlockInstructions: "Didn't receive unlock instructions?"

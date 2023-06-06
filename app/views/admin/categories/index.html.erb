@@ -1,0 +1,37 @@
+<h1><%= t('.Categories') %></h1>
+
+<div class="buttons_panel">
+  <%= link_to t('.submit.NewCategory'), new_admin_category_path, class: "btn btn-outline-#{cookies[:theme] == "dark" ? "light": "dark"} btn-sm" %>
+</div>
+
+<section id="categories">
+  <table class="table">
+    <thead>
+      <tr>
+        <th class="<%= cookies[:theme] %>">#</th>
+        <th class="<%= cookies[:theme] %>"><%= t('.name') %></th>
+        <th class="<%= cookies[:theme] %>"><%= t('.parent') %></th>
+        <th class="<%= cookies[:theme] %>"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @categories.each_with_index do |category, index| %>
+        <tr>
+          <td class="<%= cookies[:theme] %>"><%= index + 1 %></td>
+          <td class="<%= cookies[:theme] %>"><%= category.name %></td>
+          <td class="<%= cookies[:theme] %>"><%= category.parent.name if category.parent.present? %></td>
+          <td>
+            <div class="inline">
+              <%= link_to t('.submit.edit'), edit_admin_category_path(category), 
+                class: "btn btn-outline-#{cookies[:theme] == "dark" ? "light": "dark"} btn-sm mx-1"  %>
+              <%= button_to t('.submit.delete'), admin_category_path(category),
+                method: :delete,
+                form: {data: {turbo_confirm: "Вы уверены?"}}, 
+                class: "btn btn-outline-#{cookies[:theme] == "dark" ? "light": "dark"} btn-sm mx-1"  %>
+            </div>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</section>

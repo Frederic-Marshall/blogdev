@@ -1,0 +1,54 @@
+<h2><%= t('.Editing') %> <%= resource_name.to_s.humanize %></h2>
+
+<%= render "devise/shared/error_messages", resource: resource %>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <div class="form-floating mt-4">
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control' %>
+    <%= f.label :email, class: 'form-label' %>
+  </div>
+
+  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+  <% end %>
+
+  <i><%= t(".leaveblankifyoudon'twanttochangeit") %></i>
+  <div class="form-floating mt-4">
+    <%= f.password_field :password, autocomplete: "new-password", class: 'form-control' %>
+    <%= f.label :password, class: 'form-label' %> 
+
+    <% if @minimum_password_length %>
+      <em><%= t('.min') %><%= @minimum_password_length %></em>
+    <% end %>
+  </div>
+
+  <div class="form-floating mt-4">
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", class: 'form-control' %>
+    <%= f.label :password_confirmation, class: 'form-label' %>
+  </div>
+  
+  <div class="mt-4">
+    <i><%= t('.weneedyourcurrentpasswordtoconfirmyourchanges') %></i>
+  </div>
+  <div class="form-floating">
+    <%= f.password_field :current_password, autocomplete: "current-password", class: 'form-control' %>
+    <%= f.label :current_password, class: 'form-label' %> 
+  </div>
+
+  <div class="form-group mt-4">
+    <%= f.submit t(".submit.Update"), class: 'btn btn-primary' %>
+    <%= link_to t('common.back'), :back, class: 'btn btn-outline-secondary' %>
+  </div>
+<% end %>
+
+<div class="mt-5">
+  <h3><%= t('.Cancelmyaccount') %></h3>
+
+  <div class='mt-4'>
+    <%= button_to t('.submit.Cancelmyaccount'), 
+      registration_path(resource_name), 
+      data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, 
+      method: :delete, 
+      class: 'btn btn-outline-danger' %>
+  </div>
+</div>

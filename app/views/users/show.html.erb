@@ -1,0 +1,9 @@
+<%= image_tag @user.avatar.url(:thumb), class: 'img-show' if @user.avatar.present? %>
+
+<h1><%= @user.email %></h1>
+
+<%= link_to 'Posts', root_path %>
+
+<% @user_posts.each do |post| %>
+  <%= link_to post.title, post_path(post) %>
+<% end %>

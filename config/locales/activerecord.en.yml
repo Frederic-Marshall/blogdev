@@ -1,0 +1,40 @@
+en:
+  activerecord:
+    models:
+      post: "Post"
+      user: 'User'
+    attributes:
+      user:
+        email: 'Email'
+        password: 'Password'
+        password_confirmation: 'Confirm the password'
+        current_password: 'Current password'
+        moderatior: 'Moderator'
+        admin: "Admin"
+      post:
+        title: 'Title'
+        summary: "Summary"
+        body: 'Body'
+        category_id: 'Category'
+        all_tags: 'Tags'
+        category: 'Category'
+        image: 'Preview'
+      category: 
+        name: 'Name'
+        parent_id: 'Parent category'
+    errors:
+      models:
+        user:
+          attributes:
+            password:
+              too_short: 'too short'
+            password_confirmation:
+              confirmation: ' '
+            email:
+              taken: 'taken' 
+        post:
+          attributes:
+            category:
+              required: 'need to choose'
+      messages:
+        blank: "can't be blank"

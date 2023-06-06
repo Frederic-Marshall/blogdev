@@ -1,0 +1,16 @@
+<h2><%= t('.ForgotPassword') %></h2>
+<%= render "devise/shared/error_messages", resource: resource %>
+
+<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+  <div class="form-floating mt-4">
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control' %>
+    <%= f.label :email, class: 'form-label' %>
+  </div>
+
+  <div class="form-group mt-4">
+    <%= f.submit t('.submit.SendMeResetPasswordInstructions'), class: 'btn btn-primary' %>
+    <%= link_to t('common.back'), :back, class: 'btn btn-outline-secondary' %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>

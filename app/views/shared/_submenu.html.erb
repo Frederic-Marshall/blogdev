@@ -1,0 +1,12 @@
+<div class="submenu container-border <%= cookies[:theme] %>">
+  <h3><%= t('.category.categories') %></h3>
+  <ul class="nav nav-pills nav-stacked flex-column">
+    <% Category.roots.each do |category| %>
+      <li class='nav-item'>
+        <%= link_to category.name, category, 
+          class: "nav-link #{'active' if current_page?(category_path(category)) || @post.present? && @post.category == category}" %>
+        <%= render 'shared/submenu_categories', categories: category.root.descendants.arrange %>
+      </li>
+    <% end %>
+  </ul>
+</div>

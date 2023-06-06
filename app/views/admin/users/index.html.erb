@@ -1,0 +1,30 @@
+<h1><%= t('.Users') %></h1>
+
+<section id="categories">
+  <table class="table">
+    <thead>
+      <tr>
+        <th class="<%= cookies[:theme] %>"><%= t('.Email') %></th>
+        <th class="<%= cookies[:theme] %>"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @users.each do |user| %>
+        <tr>
+          <td class="<%= cookies[:theme] %>"><%= user.email %></td>
+          <td class='inline'>
+            <%= link_to t('.submit.Edit_account'), 
+              edit_admin_user_path(user), 
+              class: 'btn btn-outline-info mx-2' %>
+
+            <%= button_to t('.submit.Cancel_account'), 
+              admin_user_path(user),
+              method: :delete,
+              form: {data: {turbo_confirm: "Вы уверены?"}},   
+              class: 'btn btn-outline-danger mx-2' %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</section>

@@ -1,0 +1,127 @@
+ru:
+  common:
+    errors: 'Произошла ошибка'
+    back: 'Назад'
+    create: 'Создать'
+    edit: 'Изменить'
+  layouts:
+    admin:
+      light: 'Светлый'
+      dark: 'Темный'
+      Moderator_panel: 'Модератор'
+      tags: "Теги"
+      Categories: 'Категории'
+      Posts: "Статьи"
+      SignIn: 'Регистрация'
+      LogIn: 'Авторизация'
+      Exit: 'Выход'
+    application:
+      Profile: 'Профиль'
+      SignIn: 'Регистрация'
+      LogIn: 'Авторизация'
+      Exit: 'Выход'
+      light: 'Светлый'
+      dark: 'Темный'
+      tags: "Теги"
+      Contacts: 'Контакты'
+      Posts: "Статьи"
+  posts:
+    post:
+      edit: 'Изменить'
+      delete: 'Удалить'
+    show:
+      edit: 'Изменить'
+      delete: 'Удалить'
+    index:
+      Posts: 'Статьи'
+      submit:
+        NewPost: 'Новая статья'
+  will_paginate:
+    previous_label: "&larr; Туда"
+    next_label: "Сюда &rarr;"
+  shared:
+    submenu:
+      category:
+        categories: 'Категории'
+  admin:
+    common:
+      errors: 'Произошла ошибка'
+      back: 'Назад'
+    users:
+      edit:
+        User: 'Пользователь'
+      index:
+        Users: 'Пользователи'
+        submit:
+          Edit_account: 'Изменить аккаунт'
+          Cancel_account: 'Удалить аккаунт'
+      form:
+        text: 'Написать true или false'
+        submit:
+          save: 'Сохранить'
+    categories:
+      index:
+        Categories: 'Категории'
+        name: 'Название'
+        parent: 'Категория родитель'
+        submit:
+          edit: 'Изменить'
+          delete: 'Удалить'
+          NewCategory: 'Новая категория'
+      new: 
+        NewCategory: 'Новая категория'
+      edit: 
+        EditCategory: 'Редактирование категории'
+      form:
+        submit:
+          '%{action} категорию'
+    posts:
+      new: 
+        NewPost: 'Новая статья'
+      edit: 
+        EditPost: 'Редактирование статьи'
+      form:
+        submit:
+          '%{action} статью'
+  devise:
+    confirmations:
+      new:
+        Reconfirm: 'Повторная отправка'
+        Resend: 'Повторная отправка'
+    passwords:
+      new:
+        ForgotPassword: 'Забыли пароль?'
+        submit:
+          SendMeResetPasswordInstructions: 'Отправить на почту инструкцию по восстановлению'
+      edit:
+        ChangeYourPassword: 'Смените свой пароль'
+        submit:
+          ChangeMyPassword: 'Сменить пароль'
+        min: 'Cимволов минимум: '
+    registrations:
+      new:
+        SugnUp: "Регистрация"
+        submit:
+          SignUp: 'Зарегестрироваться'
+        min: 'Cимволов минимум: '
+      edit:
+        Editing: "Редактирование"
+        submit:
+          Update: 'Обновить'
+          Cancelmyaccount: 'Удалить мой аккаунт'
+        min: 'Cимволов минимум: '
+        leaveblankifyoudon'twanttochangeit: 'Пропустите это поле, если не хотите его менять'
+        weneedyourcurrentpasswordtoconfirmyourchanges: 'Подтвердите свой пароль для сохранения изменений'
+        Cancelmyaccount: 'Удалить мой аккаунт'
+    sessions:
+      new:
+        LogIn: 'Авторизация'
+        submit:
+          LogIn: 'Авторизироваться'
+    shared:
+      links:
+        LogIn: 'Авторизироваться'
+        SignUp: 'Зарегестрироваться'
+        ForgotPassword: 'Забыли пароль?'
+        Reconfirm: 'Повторная отправка'
+        ReconfirmInlockInstructions: 'Не получили инструкции по разблокировке?'

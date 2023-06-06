@@ -1,0 +1,21 @@
+<%= form_for [:admin, @user], html: {multipart: true}, data: { turbo: false } do |f| %>
+  <div class="form-group mt-4">
+    <%= f.label :avatar, id: 'formFile', class: 'form-label' %>
+    <%= f.file_field :avatar, class: 'form-control' %>
+  </div>
+
+  <div class="form-check mt-4">
+    <%= f.check_box :moderatior, class: 'form-check-input' %>
+    <%= f.label :moderatior, class: 'form-check-label' %>
+  </div>
+
+  <div class="form-check mt-4">
+    <%= f.check_box :admin, class: 'form-check-input' %>
+    <%= f.label :admin, class: 'form-check-label' %>
+  </div>
+
+  <div class="form-group mt-4">
+    <%= f.submit t('.submit.save'), class: 'btn btn-primary' %>
+    <%= link_to t('common.back'), :back, class: 'btn btn-outline-secondary' %>
+  </div>
+<% end %>

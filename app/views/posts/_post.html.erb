@@ -1,0 +1,33 @@
+<article class="post">
+  <section class="post-head">
+    <h2><%= link_to post.title, post_path(post), class: "#{cookies[:theme]}" %></h2>
+    <small>
+      <div class="inline my-2">
+        <time><%= post.created_at.to_date.strftime("%d %B, %Y") %></time>
+        <% if post.category.present? %>
+          |
+          <%= link_to post.category.name, post.category, class: "links #{cookies[:theme]}"  %>
+        <% end %>
+        
+        <% if user_signed_in? && current_user.admin? %>
+          |
+          <%= link_to t('.edit'), edit_admin_post_path(post), class: "links #{cookies[:theme]}" %>
+          |
+          <%= button_to t('.delete'), admin_post_path(post),
+            method: :delete,
+            form: {data: {turbo_confirm: "Вы уверены?"}}, class: "links #{cookies[:theme]}" %>
+        <% end %>
+      </div>
+      
+    </small>
+  </section>
+
+  <section class="post-summary clearfix">
+    <%= image_tag post.image.url(:thumb), class: 'img-thumbnail thumb' if post.image? %>
+    <%= post.summary %>
+  </section>
+
+  <section class="footer-summary">
+    <%= raw post.tags.map(&:name).map{ |t| link_to t, tag_path(t), class: 'tag tag-pill tag-primary' }.join(' ') %>
+  </section>
+</article>
